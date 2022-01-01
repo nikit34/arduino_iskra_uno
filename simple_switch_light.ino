@@ -1,5 +1,5 @@
 int switchPin = 8;
-int ledPin = 13; 
+int ledPin = 13;
 boolean lastBtn = LOW;
 boolean currentBtn = LOW;
 boolean led0n = false;
@@ -13,13 +13,13 @@ boolean debounce(boolean last){
   boolean current = digitalRead(switchPin);
   if (last != current) {
     delay(5);
-    current = digitalRead(switchPin); 
+    current = digitalRead(switchPin);
   }
   return current;
 }
 
 void loop() {
-  currentBtn = debounce(lastBtn); 
+  currentBtn = debounce(lastBtn);
   if (lastBtn == LOW && currentBtn == HIGH){
     led0n = !led0n;
   }

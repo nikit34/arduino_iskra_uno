@@ -4,7 +4,7 @@
 
 void setup() {
     for (int pin = FIRST_LED_PIN; pin <= LAST_LED_PIN; ++pin)
-        pinMode(pin, OUTPUT)
+        pinMode(pin, OUTPUT);
 }
 
 void loop() {
